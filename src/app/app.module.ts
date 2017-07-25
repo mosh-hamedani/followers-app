@@ -9,8 +9,7 @@ import { AboutComponent } from './about/about.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { GithubFollowersComponent } from './github-followers/github-followers.component';
 
-import { GithubFollowersService } from './services/github-followers.service';
-import { DataService } from './services/data.service';
+import { GithubFollowersService } from './github-followers/github-followers.service';
 
 @NgModule({
   declarations: [
@@ -29,7 +28,6 @@ import { DataService } from './services/data.service';
     ])
   ],
   providers: [
-    DataService,
     GithubFollowersService
   ],
   bootstrap: [AppComponent]

@@ -1,5 +1,5 @@
 import { ActivatedRoute } from '@angular/router';
-import { GithubFollowersService } from './../services/github-followers.service';
+import { GithubFollowersService } from './github-followers.service';
 import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs/Observable'; 
 import 'rxjs/add/observable/combineLatest';
@@ -27,7 +27,7 @@ export class GithubFollowersComponent implements OnInit {
       let id = combined[0].get('id');
       let page = combined[1].get('page');
 
-      return this.service.getAll();
+      return this.service.getFollowers();
     })
     .subscribe(followers => this.followers = followers);
   }
